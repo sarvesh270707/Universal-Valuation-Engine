@@ -18,30 +18,50 @@ Engineered with strict accounting fidelity (natural balance sheet roll-forward w
 
 ```mermaid
 flowchart TD
+
     subgraph IngestionLayer["1. Ingestion & Normalisation"]
-        Raw[Filing Data: CSV / XBRL / API] --> Ingest[Data Ingestion Engine]
-        Ingest --> Dict[Universal Accounting Dictionary]
-        Dict --> Norm[Ind AS Accounting Normaliser]
+        Raw["Filing Data: CSV / XBRL / API"]
+        Ingest["Data Ingestion Engine"]
+        Dict["Universal Accounting Dictionary"]
+        Norm["Ind AS Accounting Normaliser"]
+
+        Raw --> Ingest
+        Ingest --> Dict
+        Dict --> Norm
     end
 
     subgraph CoreLayer["2. Classification & Financial Analysis"]
-        Norm --> Class[21-Sector Classifier & Override]
-        Class --> Hist[Historical Ratio & CAGR Analyser]
-        Hist --> ThreeStmt[Integrated 3-Statement Model<br/>(Assets = Liabilities + Equity)]
+        Class["21-Sector Classifier and Override"]
+        Hist["Historical Ratio and CAGR Analyser"]
+        ThreeStmt["Integrated 3-Statement Model - Assets = Liabilities + Equity"]
+
+        Norm --> Class
+        Class --> Hist
+        Hist --> ThreeStmt
     end
 
     subgraph SectorLayer["3. Operational Forecasting & Valuation"]
-        ThreeStmt --> Sectors[21 Sector Forecasting Modules]
-        Sectors --> CostOfCap[Cost of Capital Engine (WACC / CAPM / Hamada)]
-        CostOfCap --> ValSuite[Valuation Methodology Suite<br/>(FCFF / FCFE / DDM / RIM / NAV / SOTP)]
-        ValSuite --> Gate{Methodology Invalidation Gate}
+        Sectors["21 Sector Forecasting Modules"]
+        CostOfCap["Cost of Capital Engine - WACC / CAPM / Hamada"]
+        ValSuite["Valuation Methodology Suite - FCFF / FCFE / DDM / RIM / NAV / SOTP"]
+        Gate{"Methodology Invalidation Gate"}
+
+        ThreeStmt --> Sectors
+        Sectors --> CostOfCap
+        CostOfCap --> ValSuite
+        ValSuite --> Gate
     end
 
     subgraph DeliveryLayer["4. Analytics, UI & Artifact Generation"]
-        Gate --> Sens[5x5 Sensitivity & Scenario Engine]
-        Sens --> WebUI[Interactive Web Research Portal (/app)]
-        Sens --> API[FastAPI High-Performance REST Endpoints]
-        Sens --> Excel[Live-Formula Excel Model Export (OpenPyXL)]
+        Sens["5x5 Sensitivity and Scenario Engine"]
+        WebUI["Interactive Web Research Portal - /app"]
+        API["FastAPI High-Performance REST Endpoints"]
+        Excel["Live-Formula Excel Model Export - OpenPyXL"]
+
+        Gate --> Sens
+        Sens --> WebUI
+        Sens --> API
+        Sens --> Excel
     end
 ```
 

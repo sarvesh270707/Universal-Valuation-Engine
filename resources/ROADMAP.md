@@ -10,24 +10,24 @@
 
 ```mermaid
 flowchart TD
-    subgraph Phase1["Phase 1: Foundation (COMPLETED)"]
-        A1[Universal Accounting Dictionary] --> A2[Ind AS Normalisation Engine]
-        A2 --> A3[Core Mathematical Formula Engine]
-        A3 --> A4[21 Sector Forecaster Registry]
-        A4 --> A5[Dual DCF / DDM / NAV / SOTP Suite]
-        A5 --> A6[FastAPI Web Portal & 50 QA Tests]
+    subgraph Phase1["Phase 1: Foundation - COMPLETED"]
+        A1["Universal Accounting Dictionary"] --> A2["Ind AS Normalisation Engine"]
+        A2 --> A3["Core Mathematical Formula Engine"]
+        A3 --> A4["21 Sector Forecaster Registry"]
+        A4 --> A5["Dual DCF / DDM / NAV / SOTP Suite"]
+        A5 --> A6["FastAPI Web Portal & 50 QA Tests"]
     end
 
-    subgraph Phase2["Phase 2: Advanced Financial Intelligence (IN PROGRESS)"]
-        B1[Dynamic Monte Carlo Simulation] --> B2[XBRL Auto-Ingestion Pipeline]
-        B2 --> B3[Credit Rating & Altman Z-Score Module]
-        B3 --> B4[Multi-Scenario M&A Accretion / Dilution Engine]
+    subgraph Phase2["Phase 2: Advanced Financial Intelligence - IN PROGRESS"]
+        B1["Dynamic Monte Carlo Simulation"] --> B2["XBRL Auto-Ingestion Pipeline"]
+        B2 --> B3["Credit Rating & Altman Z-Score Module"]
+        B3 --> B4["Multi-Scenario M&A Accretion / Dilution Engine"]
     end
 
-    subgraph Phase3["Phase 3: Autonomous Terminal & Global Integration (PLANNED)"]
-        C1[Multi-Currency Cross-Border FX Engine] --> C2[LLM-Assisted 10-K / Annual Report MD&A Parser]
-        C2 --> C3[Real-time NSE / BSE WebSocket Feed Integration]
-        C3 --> C4[Automated Pitchbook & PDF Teaser Generator]
+    subgraph Phase3["Phase 3: Autonomous Terminal & Global Integration - PLANNED"]
+        C1["Multi-Currency Cross-Border FX Engine"] --> C2["LLM-Assisted 10-K / Annual Report MD&A Parser"]
+        C2 --> C3["Real-time NSE / BSE WebSocket Feed Integration"]
+        C3 --> C4["Automated Pitchbook & PDF Teaser Generator"]
     end
 
     Phase1 --> Phase2
