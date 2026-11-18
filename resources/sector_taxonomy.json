@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Universal Financial Valuation Engine - 21 Sector Registry Taxonomy",
+  "version": "1.2.0-dev",
+  "status": "In Active Development",
+  "sectors": [
+    {
+      "sector_id": "RETAIL_JEWELLERY",
+      "name": "Retail & Consumer Jewellery",
+      "archetype": "Titan Company Ltd.",
+      "key_drivers": ["Store Count", "Like-for-Like (SSG) Growth", "Gold Price Inflation", "Making Charges Margin"],
+      "recommended_valuation": "FCFF_DCF_DUAL",
+      "working_capital_sensitivity": "HIGH"
+    },
+    {
+      "sector_id": "BANKING",
+      "name": "Commercial Banking",
+      "archetype": "HDFC Bank Limited",
+      "key_drivers": ["Gross Advances Growth", "Net Interest Margin (NIM)", "Credit Cost (PCR)", "CASA Ratio"],
+      "recommended_valuation": "DDM",
+      "working_capital_sensitivity": "N/A (Operating Raw Material)"
+    },
+    {
+      "sector_id": "NBFC",
+      "name": "Non-Banking Financial Company",
+      "archetype": "Bajaj Finance Limited",
+      "key_drivers": ["AUM Growth", "Spread (Yield - Borrowing Cost)", "GNPA / NNPA Slippages", "Capital Adequacy (CRAR)"],
+      "recommended_valuation": "RESIDUAL_INCOME",
+      "working_capital_sensitivity": "N/A"
+    },
+    {
+      "sector_id": "LIFE_INSURANCE",
+      "name": "Life Insurance",
+      "archetype": "SBI Life Insurance",
+      "key_drivers": ["Annualized Premium Equivalent (APE)", "Value of New Business (VNB) Margin", "13th & 61st Month Persistency", "Embedded Value (EV) Operating Profit"],
+      "recommended_valuation": "EMBEDDED_VALUE_VNB",
+      "working_capital_sensitivity": "N/A"
+    },
+    {
+      "sector_id": "REIT",
+      "name": "Real Estate Investment Trust",
+      "archetype": "Brookfield India Real Estate Trust",
+      "key_drivers": ["Gross Leasable Area (GLA)", "Occupancy Rate", "WALE (Years)", "Net Operating Income (NOI)", "Capitalization Rate"],
+      "recommended_valuation": "NAV_NDCF",
+      "working_capital_sensitivity": "MODERATE"
+    },
+    {
+      "sector_id": "CONGLOMERATE",
+      "name": "Diversified Conglomerate",
+      "archetype": "Reliance Industries Ltd.",
+      "key_drivers": ["Segmental EBITDA Contribution", "CapEx Allocation", "Holding Company Discount (10-25%)"],
+      "recommended_valuation": "SOTP",
+      "working_capital_sensitivity": "VARIABLE_BY_SEGMENT"
+    },
+    {
+      "sector_id": "IT_SERVICES",
+      "name": "Information Technology Services",
+      "archetype": "Tata Consultancy Services",
+      "key_drivers": ["Constant Currency Revenue Growth", "Attrition Rate", "Offshore / Onsite Billing Mix", "FCF Conversion Ratio"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "LOW"
+    },
+    {
+      "sector_id": "PHARMACEUTICALS",
+      "name": "Pharmaceuticals & Healthcare",
+      "archetype": "Sun Pharma / Dr. Reddy's",
+      "key_drivers": ["ANDA Filings Pipeline", "R&D Spend % of Revenue", "Domestic Chronic Share", "US Generic Pricing Erosion"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "HIGH"
+    },
+    {
+      "sector_id": "AUTOMOTIVE",
+      "name": "Automotive & Mobility OEM",
+      "archetype": "Tata Motors / Maruti Suzuki",
+      "key_drivers": ["Volume Wholesale Dispatches", "Average Realization per Vehicle (ARPV)", "Raw Material Steel/Aluminium Inflation", "EV Penetration %"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "MODERATE"
+    },
+    {
+      "sector_id": "FMCG",
+      "name": "Fast Moving Consumer Goods",
+      "archetype": "Hindustan Unilever Limited",
+      "key_drivers": ["Volume vs Value Growth", "Rural vs Urban Consumption Trend", "Ad & Promotion Spend % of Sales", "Gross Margin Protection"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "NEGATIVE_WORKING_CAPITAL"
+    },
+    {
+      "sector_id": "OIL_AND_GAS",
+      "name": "Oil & Gas Exploration & Refining",
+      "archetype": "ONGC / Indian Oil",
+      "key_drivers": ["Gross Refining Margin (GRM) $/bbl", "Crude Production Volumes (MMTOE)", "Petchem Spreads"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "HIGH"
+    },
+    {
+      "sector_id": "TELECOM",
+      "name": "Telecommunications",
+      "archetype": "Bharti Airtel",
+      "key_drivers": ["Average Revenue Per User (ARPU)", "4G/5G Subscriber Additions", "Tower & Spectrum Lease Depreciation", "Churn Rate"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "MODERATE"
+    },
+    {
+      "sector_id": "POWER_UTILITIES",
+      "name": "Power Generation & Transmission",
+      "archetype": "NTPC / Power Grid",
+      "key_drivers": ["Regulated Equity Base", "Plant Load Factor (PLF)", "Regulated Return on Equity (15.5%)", "Renewable Pipeline GW"],
+      "recommended_valuation": "REGULATED_ASSET_BASE_DCF",
+      "working_capital_sensitivity": "HIGH"
+    },
+    {
+      "sector_id": "CEMENT",
+      "name": "Cement & Building Materials",
+      "archetype": "UltraTech Cement",
+      "key_drivers": ["EBITDA per Tonne (₹/MT)", "Capacity Utilization %", "Power & Fuel Cost per Tonne", "Lead Distance Logistics"],
+      "recommended_valuation": "EV_PER_TONNE_AND_DCF",
+      "working_capital_sensitivity": "MODERATE"
+    },
+    {
+      "sector_id": "METALS_MINING",
+      "name": "Metals & Mining",
+      "archetype": "Tata Steel / Hindalco",
+      "key_drivers": ["LME Spot Prices", "Coking Coal & Iron Ore Captive Sourcing %", "Spreads over Hot-Rolled Coil (HRC)"],
+      "recommended_valuation": "FCFF_DCF_THROUGH_CYCLE",
+      "working_capital_sensitivity": "HIGH"
+    },
+    {
+      "sector_id": "CHEMICALS",
+      "name": "Speciality & Agrochemicals",
+      "archetype": "PI Industries / Aarti Industries",
+      "key_drivers": ["Custom Synthesis (CSM) Order Book", "Asset Turnover Ratio", "Raw Material Pass-through Timelag"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "MODERATE"
+    },
+    {
+      "sector_id": "AVIATION",
+      "name": "Aviation & Airlines",
+      "archetype": "InterGlobe Aviation (IndiGo)",
+      "key_drivers": ["Passenger Load Factor (PLF)", "Revenue per Available Seat Kilometer (RASK)", "Cost per Available Seat Kilometer (CASK ex-Fuel)", "Aviation Turbine Fuel (ATF) Cost %"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "NEGATIVE_WORKING_CAPITAL"
+    },
+    {
+      "sector_id": "HOSPITALITY",
+      "name": "Hotels & Hospitality",
+      "archetype": "Indian Hotels Company (IHCL)",
+      "key_drivers": ["Revenue Per Available Room (RevPAR)", "Average Daily Rate (ADR)", "Occupancy %", "Management Fee Asset-Light Share"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "LOW"
+    },
+    {
+      "sector_id": "HEALTHCARE_HOSPITALS",
+      "name": "Healthcare & Hospitals",
+      "archetype": "Apollo Hospitals / Max Healthcare",
+      "key_drivers": ["Average Revenue Per Occupied Bed (ARPOB)", "Average Length of Stay (ALOS)", "In-patient vs Out-patient Volume Mix"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "LOW"
+    },
+    {
+      "sector_id": "INFRASTRUCTURE_EPC",
+      "name": "Infrastructure & Engineering Procurement Construction",
+      "archetype": "Larsen & Toubro",
+      "key_drivers": ["Order Inflow & Order Book to Bill Ratio", "Execution Milestones", "Retention Money & Mobilization Advances", "Working Capital % of Sales"],
+      "recommended_valuation": "FCFF_DCF",
+      "working_capital_sensitivity": "VERY_HIGH"
+    },
+    {
+      "sector_id": "E_COMMERCE_TECH",
+      "name": "Consumer Internet & Platform Tech",
+      "archetype": "Zomato / Info Edge",
+      "key_drivers": ["Gross Order Value (GOV)", "Take Rate %", "Customer Acquisition Cost (CAC) vs LTV", "Contribution Margin % of GOV"],
+      "recommended_valuation": "FCFF_DCF_AND_RULE_OF_40",
+      "working_capital_sensitivity": "NEGATIVE_WORKING_CAPITAL"
+    }
+  ]
+}

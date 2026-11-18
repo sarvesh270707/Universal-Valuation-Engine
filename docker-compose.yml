@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  universal-dcf-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: universal_dcf_engine
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DEBUG=false
+      - DATABASE_URL=sqlite:///./universal_dcf.db
+    volumes:
+      - dcf_data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  dcf_data:

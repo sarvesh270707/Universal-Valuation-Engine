@@ -1,0 +1,34 @@
+import pytest
+import os
+import openpyxl
+import pandas as pd
+
+@pytest.fixture(scope="session")
+def titan_model_path():
+    path = os.path.abspath("Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/model/Titan_3Statement_DCF_Model.xlsx")
+    assert os.path.exists(path), f"Titan model file not found at {path}"
+    return path
+
+@pytest.fixture(scope="session")
+def titan_workbook(titan_model_path):
+    wb = openpyxl.load_workbook(titan_model_path, data_only=True)
+    return wb
+
+@pytest.fixture(scope="session")
+def retail_excel_path():
+    path = os.path.abspath("Finance_FP&A_Portfolio/Project_02_Retail_Budget_vs_Actual/data/Retail_Sector_Financial_Analysis.xlsx")
+    assert os.path.exists(path), f"Retail Excel file not found at {path}"
+    return path
+
+@pytest.fixture(scope="session")
+def retail_data(retail_excel_path):
+    df_fact = pd.read_excel(retail_excel_path, sheet_name="FactRetailPerformance")
+    df_region = pd.read_excel(retail_excel_path, sheet_name="DimRegion")
+    df_category = pd.read_excel(retail_excel_path, sheet_name="DimProductCategory")
+    df_date = pd.read_excel(retail_excel_path, sheet_name="DimDate")
+    return {
+        "fact": df_fact,
+        "region": df_region,
+        "category": df_category,
+        "date": df_date
+    }
