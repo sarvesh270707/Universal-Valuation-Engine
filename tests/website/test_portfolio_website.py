@@ -25,11 +25,18 @@ def test_playwright_modal_interaction():
         body_text = page.locator("#project-modal-body").inner_text()
         assert "Titan" in body_text, "Modal body missing Titan content"
         
-        # Test Modal 2 (Retail)
+        # Test Modal 2 (Universal Engine)
         page.evaluate("() => window.openProjectModal(2)")
         page.wait_for_timeout(500)
         assert page.locator("#modal-project").is_visible(), "Modal did not open for Project 2"
         body_text_2 = page.locator("#project-modal-body").inner_text()
-        assert "Retail" in body_text_2, "Modal body missing Retail content"
+        assert "Universal" in body_text_2, "Modal body missing Universal Engine content"
+
+        # Test Modal 3 (Retail FP&A)
+        page.evaluate("() => window.openProjectModal(3)")
+        page.wait_for_timeout(500)
+        assert page.locator("#modal-project").is_visible(), "Modal did not open for Project 3"
+        body_text_3 = page.locator("#project-modal-body").inner_text()
+        assert "Retail" in body_text_3, "Modal body missing Retail content"
         
         browser.close()

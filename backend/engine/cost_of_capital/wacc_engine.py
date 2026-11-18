@@ -5,7 +5,7 @@ Cost of Debt, Capital Structure Weights, and Blended WACC.
 """
 
 from typing import Dict, Any, Optional
-from datetime import datetime
+from datetime import datetime, timezone
 from backend.engine.classification.sector_classifier import SectorType
 
 class CostOfCapitalEngine:
@@ -49,7 +49,7 @@ class CostOfCapitalEngine:
         Computes complete cost of capital profile.
         Automatically substitutes Ke for WACC if the entity is a Bank, NBFC, or Life Insurer.
         """
-        valuation_dt = valuation_date or datetime.utcnow().strftime("%Y-%m-%d")
+        valuation_dt = valuation_date or datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
         # 1. Cost of Equity via CAPM
         cost_of_equity = risk_free_rate + (beta * equity_risk_premium)

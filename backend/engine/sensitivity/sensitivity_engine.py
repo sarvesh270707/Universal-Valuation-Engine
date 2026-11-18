@@ -58,7 +58,7 @@ class SensitivityEngine:
             final_p = proj["forecast_periods"][-1]
             final_stmt = proj["statements"][final_p]
             output[sc_name] = {
-                "assumptions": sc_assumptions.dict(),
+                "assumptions": sc_assumptions.model_dump() if hasattr(sc_assumptions, "model_dump") else sc_assumptions.dict(),
                 "final_year_revenue": final_stmt["operating_revenue"],
                 "final_year_ebitda": final_stmt["ebitda"],
                 "final_year_nopat": final_stmt["nopat"],

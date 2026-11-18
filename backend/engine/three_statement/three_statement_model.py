@@ -7,9 +7,11 @@ Projects integrated 5-year financial statements with:
 """
 
 from typing import Dict, Any, List, Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 class ScenarioAssumptions(BaseModel):
+    model_config = ConfigDict(arbitrary_types_allowed=True, validate_assignment=True)
+
     revenue_growth_rate: float = 0.12 # 12% annual growth
     gross_margin: float = 0.28 # 28% gross margin
     ebitda_margin: float = 0.12 # 12% EBITDA margin

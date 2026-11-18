@@ -1,5 +1,8 @@
 import pytest
 import pandas as pd
+from pathlib import Path
+
+SAMPLE_DATA_DIR = Path(__file__).resolve().parent.parent.parent / "resources" / "sample_data" / "titan" / "data"
 
 def test_titan_valuation_regression(titan_workbook):
     ws_cover = titan_workbook['01_Cover']
@@ -12,7 +15,8 @@ def test_titan_valuation_regression(titan_workbook):
     assert round(gordon_price, 2) == 368.40, f"Gordon Growth Price drifted from 368.40: {gordon_price}"
 
 def test_titan_historical_performance_regression():
-    p_is = "Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed/income_statement_standardized.csv"
+    p_is = SAMPLE_DATA_DIR / "processed" / "income_statement_standardized.csv"
+    assert p_is.exists(), f"Historical standardized income statement missing at {p_is}"
     df = pd.read_csv(p_is)
     row_rev = df[df.iloc[:, 0].str.contains("Total Revenue|Revenue from Operations", case=False, na=False)]
     assert not row_rev.empty
