@@ -17,8 +17,17 @@ def test_unit_detection():
     assert m3 == 0.1
 
 def test_csv_ingestion_with_real_filing():
-    csv_path = "Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed/income_statement_standardized.csv"
-    assert os.path.exists(csv_path), "Target CSV must exist"
+    candidate_paths = [
+        os.path.abspath("resources/sample_data/titan/data/processed/income_statement_standardized.csv"),
+        os.path.abspath("Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed/income_statement_standardized.csv"),
+        "C:/Users/DELL/Desktop/DCF-Valuation-Model/Finance_FP&A_Portfolio/Project_01_Titan_Three_Statement_DCF/data/processed/income_statement_standardized.csv"
+    ]
+    csv_path = None
+    for p in candidate_paths:
+        if os.path.exists(p):
+            csv_path = p
+            break
+    assert csv_path is not None and os.path.exists(csv_path), "Target CSV must exist"
 
     result = DataIngestionEngine.ingest_csv_statement(
         file_path=csv_path,

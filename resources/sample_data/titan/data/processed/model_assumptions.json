@@ -1,0 +1,83 @@
+{
+  "Base": {
+    "Description": "Consensus expansion: Steady luxury retail market share gain, store additions, 15% fading to 12% growth.",
+    "Revenue_Growth": [
+      0.15,
+      0.14,
+      0.13,
+      0.12,
+      0.12
+    ],
+    "Gross_Margin": 0.225,
+    "EBITDA_Margin": 0.105,
+    "Employee_Exp_Pct": 0.033,
+    "Other_OpExp_Pct": 0.087,
+    "Depr_Pct_Opening_PPE": 0.18,
+    "Capex_Pct_Revenue": 0.025,
+    "Tax_Rate": 0.2517,
+    "DSO": 5.0,
+    "DIO": 205.0,
+    "DPO": 42.0,
+    "Dividend_Payout": 0.28,
+    "Cost_of_Debt_PreTax": 0.075,
+    "Rf": 0.07,
+    "ERP": 0.07,
+    "Beta": 1.15,
+    "Terminal_Growth": 0.055,
+    "Exit_Multiple": 35.0
+  },
+  "Bear": {
+    "Description": "Macro slowdown: Gold price volatility, consumer demand moderation, intensified retail competition.",
+    "Revenue_Growth": [
+      0.1,
+      0.09,
+      0.09,
+      0.08,
+      0.08
+    ],
+    "Gross_Margin": 0.205,
+    "EBITDA_Margin": 0.085,
+    "Employee_Exp_Pct": 0.036,
+    "Other_OpExp_Pct": 0.095,
+    "Depr_Pct_Opening_PPE": 0.18,
+    "Capex_Pct_Revenue": 0.02,
+    "Tax_Rate": 0.2517,
+    "DSO": 6.0,
+    "DIO": 220.0,
+    "DPO": 40.0,
+    "Dividend_Payout": 0.25,
+    "Cost_of_Debt_PreTax": 0.08,
+    "Rf": 0.07,
+    "ERP": 0.07,
+    "Beta": 1.2,
+    "Terminal_Growth": 0.05,
+    "Exit_Multiple": 28.0
+  },
+  "Bull": {
+    "Description": "Accelerated formalization: High wedding season demand, Mia & Caratlane rapid scale, international expansion.",
+    "Revenue_Growth": [
+      0.2,
+      0.18,
+      0.17,
+      0.16,
+      0.15
+    ],
+    "Gross_Margin": 0.245,
+    "EBITDA_Margin": 0.12,
+    "Employee_Exp_Pct": 0.03,
+    "Other_OpExp_Pct": 0.08,
+    "Depr_Pct_Opening_PPE": 0.18,
+    "Capex_Pct_Revenue": 0.03,
+    "Tax_Rate": 0.2517,
+    "DSO": 4.5,
+    "DIO": 190.0,
+    "DPO": 45.0,
+    "Dividend_Payout": 0.3,
+    "Cost_of_Debt_PreTax": 0.072,
+    "Rf": 0.07,
+    "ERP": 0.07,
+    "Beta": 1.1,
+    "Terminal_Growth": 0.06,
+    "Exit_Multiple": 42.0
+  }
+}
